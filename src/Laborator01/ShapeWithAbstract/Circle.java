@@ -1,21 +1,24 @@
-package Laborator01.ShapeWIthAbstract;
+package Laborator01.ShapeWithAbstract;
 
 public class Circle extends Shape
-
 {
-    private Integer radius;
+    private double radius;
 
+    public Circle(double radius) {
+        super();
+        this.radius = radius;
+    }
 
-    public Circle(String colour, Integer radius) {
+    public Circle(String colour, double radius) {
         super(colour);
         this.radius = radius;
     }
 
-    public Integer getRadius() {
+    public double getRadius() {
         return radius;
     }
 
-    public void setRadius(Integer radius) {
+    public void setRadius(double radius) {
         this.radius = radius;
     }
 
@@ -29,8 +32,13 @@ public class Circle extends Shape
         return "circle";
     }
 
-    public Double getArea()
+    public double getArea()
     {
         return Math.PI*radius*radius;
+    }
+
+    public double getPerimeter()
+    {
+        return 2*Math.PI*radius;
     }
 }
